@@ -1,0 +1,238 @@
+.helper {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color:transparent;
+
+    &__max {
+        display: block;
+    }
+
+    &__min {
+        position: relative;
+        background-color: rgba(74, 182, 219, .6);
+        max-width: 40rem;
+        min-height: 7rem;
+        margin: 0 1rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    &__close {
+        padding-right: 1rem;
+        position: absolute;
+        right: 0;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+
+    &__list {
+        margin-top: 1.5rem;
+    }
+
+    &__line {
+        border-bottom: 1px solid $gray-400;
+        padding: .5rem 0;
+        margin-bottom: .5rem;
+    }
+}
+
+.max {
+    position: relative;
+    background-color: $white;
+    margin: .5rem .5rem 0 .5rem;
+    padding: 1rem;
+    box-shadow: 0 .1rem 2rem rgba($color-black, .3);
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.form-ask {
+    &__find {
+        display: block;
+        padding-bottom: .5rem;
+    }
+
+    &__question {
+        height: 3.5rem;
+        padding-left: 1rem;
+        width: 100%;
+        font-size: 1.5rem;
+        color: $gray-500;
+        border: 1px solid $gray-400;
+        border-radius: .5rem;
+    }
+
+    &__link {
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+.call-me {
+   
+    &__block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__call {
+        display: block;
+        text-transform: uppercase;
+        padding-bottom: .5rem;
+    }
+
+    &__field {
+        height: 3.5rem;
+        width: 60%;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        color: $gray-500;
+        border: 1px solid $gray-400;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.5rem;
+        color: $white;
+        font-weight: 700;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        width: 40%;
+        border: 1px solid $gray-400;
+        border-left: 0;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        background-color: orange;
+    }
+
+    &__text {
+        margin-top: 1rem;
+    }
+}
+
+.call-you {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    &__phone {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 3rem;
+        color: rgba(177, 229, 245, 0.9);
+        transform: rotate(90deg);
+    }
+}
+
+.min {
+    color: $white;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    animation: blinkhelper 1.5s ease-out infinite;
+    position: relative;
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    &__phrase {
+        font-size: 1.1rem;
+    }
+
+    &__to-max {
+        align-self: start;
+        padding-right: .5rem;
+        padding-top: .5rem;
+    }
+
+    &__button {
+        position: absolute;
+        z-index: 3; 
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border: 0;
+       
+        &:focus {
+            box-shadow: 0 0 0 2pt red;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+    }
+
+    &__phone {
+        padding: 1rem;
+        display: inline-block;
+        font-size: 3rem;
+    }
+}
+
+.massangers {
+
+    &__list {
+        display: flex;
+        margin-top: 1rem;
+    }
+   
+    &__item {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: rgba(177, 229, 245, 0.9);
+        margin-right: 1rem;
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 2rem;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+}
+
+.wrap-helper-max {
+    display: none;
+   
+}
+
+.wrap-helper-min {
+    display: none;
+}
+
+.active-helper {
+    display: block;
+}

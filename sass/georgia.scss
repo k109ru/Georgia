@@ -1,0 +1,61 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'navbar.scss';
+@import 'main.scss';
+@import 'buttons.scss';
+
+@import 'animation.scss';
+@import 'composition.scss';
+@import 'helper.scss';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-h) { // width < 1200?
+      font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-v) { // width < 900?
+      font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  
+  @include respond(desktop) {
+      font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  font-family: 'Montserrat';
+  letter-spacing: 0.0625em;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+li {
+  list-style: none;
+}

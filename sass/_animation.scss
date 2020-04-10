@@ -1,0 +1,89 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes blinkhelper {
+    0% {
+        background-color: rgba(74, 182, 219, .6);
+    }
+
+    50% {
+        background-color: rgba(27, 162, 208, .8);
+    }
+
+    100% {
+        background-color: rgba(74, 182, 219, .6);
+    }
+}
+
+@keyframes rotationLogo {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes phone {
+    0%, 100% {
+        transform: rotate(70deg);
+    }
+    50% {
+        transform: rotate(110deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+     transform: scale(0.6);
+     opacity: 0;
+    }
+    50% {
+     opacity: 1;
+    }
+    100% {
+     transform: scale(.7);
+     opacity: 0;
+    }
+} 
